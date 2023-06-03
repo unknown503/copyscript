@@ -1,0 +1,280 @@
+{
+  "kind": "Program",
+  "body": [
+    {
+      "body": [
+        {
+          "value": {
+            "kind": "CallExpr",
+            "caller": {
+              "kind": "Identifier",
+              "symbol": "CEIL"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "symbol": "min"
+              }
+            ]
+          },
+          "assigne": {
+            "kind": "Identifier",
+            "symbol": "min"
+          },
+          "kind": "AssignmentExpr"
+        },
+        {
+          "value": {
+            "kind": "CallExpr",
+            "caller": {
+              "kind": "Identifier",
+              "symbol": "FLOOR"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "symbol": "max"
+              }
+            ]
+          },
+          "assigne": {
+            "kind": "Identifier",
+            "symbol": "max"
+          },
+          "kind": "AssignmentExpr"
+        },
+        {
+          "kind": "CallExpr",
+          "caller": {
+            "kind": "Identifier",
+            "symbol": "FLOOR"
+          },
+          "args": [
+            {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "CallExpr",
+                  "caller": {
+                    "kind": "Identifier",
+                    "symbol": "RANDOM"
+                  },
+                  "args": []
+                },
+                "right": {
+                  "kind": "BinaryExpr",
+                  "left": {
+                    "kind": "Identifier",
+                    "symbol": "max"
+                  },
+                  "right": {
+                    "kind": "Identifier",
+                    "symbol": "min"
+                  },
+                  "operator": "-"
+                },
+                "operator": "*"
+              },
+              "right": {
+                "kind": "Identifier",
+                "symbol": "min"
+              },
+              "operator": "+"
+            }
+          ]
+        }
+      ],
+      "name": "getRandomNumber",
+      "parameters": [
+        "min",
+        "max"
+      ],
+      "kind": "FunctionDeclaration"
+    },
+    {
+      "kind": "VarDeclaration",
+      "value": {
+        "kind": "CallExpr",
+        "caller": {
+          "kind": "Identifier",
+          "symbol": "getRandomNumber"
+        },
+        "args": [
+          {
+            "kind": "NumericLiteral",
+            "value": 0
+          },
+          {
+            "kind": "NumericLiteral",
+            "value": 500
+          }
+        ]
+      },
+      "identifier": "randValue",
+      "constant": true
+    },
+    {
+      "kind": "VarDeclaration",
+      "value": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "BinaryExpr",
+          "left": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "NumericLiteral",
+                  "value": 5
+                },
+                "right": {
+                  "kind": "NumericLiteral",
+                  "value": 2
+                },
+                "operator": "*"
+              },
+              "right": {
+                "kind": "NumericLiteral",
+                "value": 10
+              },
+              "operator": "+"
+            },
+            "right": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "NumericLiteral",
+                  "value": 1
+                },
+                "right": {
+                  "kind": "NumericLiteral",
+                  "value": 2
+                },
+                "operator": "/"
+              },
+              "right": {
+                "kind": "NumericLiteral",
+                "value": 500
+              },
+              "operator": "*"
+            },
+            "operator": "-"
+          },
+          "right": {
+            "kind": "NumericLiteral",
+            "value": 999
+          },
+          "operator": "+"
+        },
+        "right": {
+          "kind": "NumericLiteral",
+          "value": 400
+        },
+        "operator": "-"
+      },
+      "identifier": "guess",
+      "constant": true
+    },
+    {
+      "kind": "VarDeclaration",
+      "value": {
+        "kind": "NumericLiteral",
+        "value": 5
+      },
+      "identifier": "x",
+      "constant": true
+    },
+    {
+      "kind": "VarDeclaration",
+      "value": {
+        "kind": "StringLiteral",
+        "value": "hola"
+      },
+      "identifier": "y",
+      "constant": true
+    },
+    {
+      "kind": "VarDeclaration",
+      "value": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "symbol": "x"
+        },
+        "right": {
+          "kind": "Identifier",
+          "symbol": "y"
+        },
+        "operator": "*"
+      },
+      "identifier": "z",
+      "constant": true
+    },
+    {
+      "kind": "FunctionExpr",
+      "name": "if",
+      "body": [
+        {
+          "kind": "CallExpr",
+          "caller": {
+            "kind": "Identifier",
+            "symbol": "print"
+          },
+          "args": [
+            {
+              "kind": "Identifier",
+              "symbol": "randValue"
+            },
+            {
+              "kind": "StringLiteral",
+              "value": "es mayor que"
+            },
+            {
+              "kind": "Identifier",
+              "symbol": "guess"
+            }
+          ]
+        }
+      ],
+      "parameterExpr": {
+        "kind": "BooleanExpr",
+        "left": {
+          "kind": "Identifier",
+          "symbol": "randValue"
+        },
+        "right": {
+          "kind": "Identifier",
+          "symbol": "guess"
+        },
+        "logicalOperator": ">="
+      },
+      "elseBody": [
+        {
+          "kind": "CallExpr",
+          "caller": {
+            "kind": "Identifier",
+            "symbol": "print"
+          },
+          "args": [
+            {
+              "kind": "Identifier",
+              "symbol": "randValue"
+            },
+            {
+              "kind": "StringLiteral",
+              "value": "es menor que"
+            },
+            {
+              "kind": "Identifier",
+              "symbol": "guess"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+fun getRandomNumber(min, max) {
+    min = CEIL(min);
+    max = FLOOR(max);
+    FLOOR(RANDOM() * (max - min) + min);
+}
+
+const randValue = getRandomNumber(0, 500);
+const guess = 5*2+10-1/2*500+999-400;
+
+const x = 5;
+const y = "hola";
+const z = x*y;
+
+if (randValue >= guess) {
+    print(randValue, "greater than", guess);
+} else {
+    print(randValue, "less than", guess);
+}   

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.6.0",
+    "inquirer": "^9.2.6",
+    "typescript": "^5.0.4"
+  },
+  "name": "copyscript",
+  "version": "0.1",
+  "type": "module",
+  "scripts": {
+    "copyscript": "tsx main.ts",
+    "compile": "npm run copyscript compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/figlet": "^1.5.6",
+    "@types/inquirer": "^9.0.3",
+    "tsx": "^4.22.4"
+  }
+}
