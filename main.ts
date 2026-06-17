@@ -52,7 +52,11 @@ try {
 	if (args[0] === "compile") {
 		if (!args[1]) {
 			console.log(chalk.red("Nothing to compile."))
-			throw new Error()
+			throw new Error("No file specified.")
+		}
+		if (!args[1].endsWith(".cscript")) {
+			console.log(chalk.red("Not a .cscript file."))
+			throw new Error("Invalid file type.")
 		}
 		console.log("Compiling " + chalk.red(args[1] + "...\n"))
 		const path = process.env.PWD + "/" + args[1]
