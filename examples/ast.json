@@ -191,8 +191,8 @@
     {
       "kind": "VarDeclaration",
       "value": {
-        "kind": "StringLiteral",
-        "value": "hola"
+        "kind": "NumericLiteral",
+        "value": 2
       },
       "identifier": "y",
       "constant": true
@@ -231,7 +231,7 @@
             },
             {
               "kind": "StringLiteral",
-              "value": "es mayor que"
+              "value": "greater than"
             },
             {
               "kind": "Identifier",
@@ -266,7 +266,7 @@
             },
             {
               "kind": "StringLiteral",
-              "value": "es menor que"
+              "value": "less than"
             },
             {
               "kind": "Identifier",
